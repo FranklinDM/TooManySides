@@ -1,0 +1,13 @@
+<!ENTITY toomanysidesOptions.label "Opzioni Too Many Sides...">
+<!ENTITY toomanysidesToggle.label "Mostra/Nascondi">
+<!ENTITY toomanysidesToggle.accesskey "M">
+<!ENTITY toomanysidesLeft.label "Mostra nella barra a sinistra">
+<!ENTITY toomanysidesLeft.accesskey "S">
+<!ENTITY toomanysidesRight.label "Mostra nella barra a destra">
+<!ENTITY toomanysidesRight.accesskey "D">
+<!ENTITY toomanysidesTop.label "Mostra nella barra in alto">
+<!ENTITY toomanysidesTop.accesskey "A">
+<!ENTITY toomanysidesBottom.label "Mostra nella barra in basso">
+<!ENTITY toomanysidesBottom.accesskey "B">
+<!ENTITY toomanysidesResetDefault.label "Ripristina posizione predefinita">
+<!ENTITY toomanysidesResetDefault.accesskey "P">

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/"?>
+
+<!DOCTYPE bindings [
+<!ENTITY % dialogDTD SYSTEM "chrome://toomanysides/locale/prefs.dtd" >
+%dialogDTD;
+<!ENTITY % tabBrowserDTD SYSTEM "chrome://global/locale/tabbrowser.dtd" >
+%tabBrowserDTD;
+]>
+
+<prefwindow id="TMSPreferences"
+        windowtype="mozilla:toomanysidesopt"
+        buttons="accept,cancel"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        title="&page.header.title;"
+        style="width: 30em; height: 20em;">
+<prefpane id="main-pane" label="&main.label;">
+  <preferences>
+    <preference id="pref-hideTitleLeftSidebar" name="extensions.toomanysides.hideTitleLeftSidebar" type="bool"/>
+    <preference id="pref-hideTitleRightSidebar" name="extensions.toomanysides.hideTitleRightSidebar" type="bool"/>
+    <preference id="pref-hideTitleTopSidebar" name="extensions.toomanysides.hideTitleTopSidebar" type="bool"/>
+    <preference id="pref-hideTitleBottomSidebar" name="extensions.toomanysides.hideTitleBottomSidebar" type="bool"/>
+    <preference id="pref-defaultPosition" name="extensions.toomanysides.defaultPosition" type="int"/>
+  </preferences>
+ 
+    <groupbox flex="1">
+      <caption label="&hideTitle.caption;"/>
+      <grid>
+        <columns>
+          <column flex="1"/>
+          <column flex="1"/>
+        </columns>
+        <rows>
+          <row>
+            <vbox align="start">
+               <checkbox label="&hideTitleLeftSidebar.label;" preference="pref-hideTitleLeftSidebar" />
+               <checkbox label="&hideTitleTopSidebar.label;" preference="pref-hideTitleTopSidebar" />
+            </vbox>
+            <vbox align="start">
+               <checkbox label="&hideTitleRightSidebar.label;" preference="pref-hideTitleRightSidebar" />
+               <checkbox label="&hideTitleBottomSidebar.label;" preference="pref-hideTitleBottomSidebar" />
+            </vbox>
+          </row>
+        </rows>
+      </grid>
+    </groupbox>
+    <groupbox flex="1">
+      <caption label="&positioning.caption;"/>
+      <hbox align="center">
+        <label id="defaultPositionLabel" value="&defaultPosition.label;" control="defaultPosition" />
+        <menulist flex="0" id="defaultPosition" preference="pref-defaultPosition">
+          <menupopup>
+            <menuitem value="1" label="&positionLeft.label;" />
+            <menuitem value="2" label="&positionRight.label;" />
+            <menuitem value="3" label="&positionTop.label;" />
+            <menuitem value="4" label="&positionBottom.label;" />
+          </menupopup>
+        </menulist>
+        <spacer flex="1" />
+      </hbox>
+    </groupbox>
+</prefpane>
+
+</prefwindow>

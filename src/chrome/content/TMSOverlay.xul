@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://toomanysides/skin/overlay.css" type="text/css"?>
+
+<!DOCTYPE overlay [
+<!ENTITY % overlayDTD SYSTEM "chrome://toomanysides/locale/overlay.dtd" >
+%overlayDTD;
+<!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd" >
+%browserDTD;
+]>
+
+<overlay id="toomanysidesOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/x-javascript" src="TMSOverlay.js" />
+
+  <menupopup id="viewSidebarMenu" context="toomanysides-context" tooltip="toomanysidesTooltip"/>
+
+  <hbox id="browser">
+    <vbox id="appcontent">
+      <vbox id="sidebar-3-box" class="chromeclass-extrachrome" insertbefore="content" style="max-height: 400px;" hidden="true">
+        <sidebarheader align="center">
+          <label id="sidebar-3-title" flex="1" crop="end"/>
+          <image id="sidebar-3-throbber"/>
+          <toolbarbutton class="tabs-closebutton" tooltiptext="&sidebarCloseButton.tooltip;" oncommand="TooManySides.closeSidebarByPosition(3);"/>
+        </sidebarheader>        
+        <browser id="sidebar-3" flex="1" autoscroll="false"
+                 style="min-height: 150px; height: 200px; max-height: 400px;"/>
+      </vbox>    
+
+      <splitter id="sidebar-3-splitter" class="chromeclass-extrachrome" insertbefore="content" hidden="true"/>
+
+      <splitter id="sidebar-4-splitter" class="chromeclass-extrachrome" insertafter="content" hidden="true"/>
+
+      <vbox id="sidebar-4-box" class="chromeclass-extrachrome" insertafter="sidebar-4-splitter" style="max-height: 400px;" hidden="true">
+        <sidebarheader align="center">
+          <label id="sidebar-4-title" flex="1" crop="end"/>
+          <image id="sidebar-4-throbber"/>
+          <toolbarbutton class="tabs-closebutton" tooltiptext="&sidebarCloseButton.tooltip;" oncommand="TooManySides.closeSidebarByPosition(4);"/>
+        </sidebarheader>        
+        <browser id="sidebar-4" flex="1" autoscroll="false"
+                 style="min-height: 150px; height: 200px; max-height: 400px;"/>
+      </vbox>
+    </vbox>
+
+    <splitter id="sidebar-2-splitter" class="chromeclass-extrachrome" insertafter="appcontent" hidden="true"/>
+
+    <vbox id="sidebar-2-box" class="chromeclass-extrachrome" insertafter="sidebar-2-splitter" hidden="true">
+      <sidebarheader align="center">
+        <label id="sidebar-2-title" flex="1" crop="end"/>
+        <image id="sidebar-2-throbber"/>
+        <toolbarbutton class="tabs-closebutton" tooltiptext="&sidebarCloseButton.tooltip;" oncommand="TooManySides.closeSidebarByPosition(2);"/>
+      </sidebarheader>        
+      <browser id="sidebar-2" flex="1" autoscroll="false"
+               style="min-width: 150px; width: 200px; max-width: 400px;"/>
+    </vbox>    
+  </hbox>
+
+
+  <popupset id="mainPopupSet">
+    <menupopup id="toomanysides-context" onpopupshowing="return TooManySides.popupShowing(event);">
+      <menuitem label="&toomanysidesToggle.label;" accesskey="&toomanysidesToggle.accesskey;" default="true" oncommand="TooManySides.toggleAction(event);"/>
+      <menuseparator/>
+      <menuitem label="&toomanysidesLeft.label;" accesskey="&toomanysidesLeft.accesskey;" id="toomanysidesLeftMenuItem" type="checkbox" oncommand="TooManySides.changePositionAction(1);"/>
+      <menuitem label="&toomanysidesRight.label;" accesskey="&toomanysidesRight.accesskey;" id="toomanysidesRightMenuItem" type="checkbox" oncommand="TooManySides.changePositionAction(2);"/>
+      <menuitem label="&toomanysidesTop.label;" accesskey="&toomanysidesTop.accesskey;" id="toomanysidesTopMenuItem" type="checkbox" oncommand="TooManySides.changePositionAction(3);"/>
+      <menuitem label="&toomanysidesBottom.label;" accesskey="&toomanysidesBottom.accesskey;" id="toomanysidesBottomMenuItem" type="checkbox" oncommand="TooManySides.changePositionAction(4);"/>
+      <menuseparator id="toomanysidesResetDefaultSeparator"/>
+      <menuitem label="&toomanysidesResetDefault.label;" accesskey="&toomanysidesResetDefault.accesskey;" id="toomanysidesResetDefaultMenuItem" oncommand="TooManySides.resetDefaultAction();"/>
+    </menupopup>
+    <tooltip id="toomanysidesTooltip" onpopupshowing="return TooManySides.fillTooltip();" > 
+      <label id="toomanysidesTooltipText" flex="1"/>
+    </tooltip>
+  </popupset>
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="bundle_toomanysidesOverlay"
+        src="chrome://toomanysides/locale/overlay.properties"/>
+  </stringbundleset>
+</overlay>

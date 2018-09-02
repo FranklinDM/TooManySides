@@ -1,0 +1,15 @@
+/* Duplicated styles... */
+#sidebar-2, #sidebar-3, #sidebar-4 {
+  background-color: Window;
+}
+
+#sidebar-2-box .tabs-closebutton, #sidebar-3-box .tabs-closebutton, #sidebar-4-box .tabs-closebutton {
+  margin-bottom: 0px !important;
+  padding: 0px 2px 0px 2px !important;
+}
+
+#sidebar-2-throbber[loading="true"], #sidebar-3-throbber[loading="true"], #sidebar-4-throbber[loading="true"] {
+  list-style-image: url("chrome://global/skin/throbber/Throbber-small.gif");
+  opacity: 0.5;
+  -moz-margin-end: 4px;
+}

@@ -1,0 +1,14 @@
+<!ENTITY toomanysidesOptions.label "Too Many Sides Options...">
+<!ENTITY toomanysidesToggle.label "Toggle">
+<!ENTITY toomanysidesToggle.accesskey "o">
+<!ENTITY toomanysidesLeft.label "Show in Left Sidebar">
+<!ENTITY toomanysidesLeft.accesskey "L">
+<!ENTITY toomanysidesRight.label "Show in Right Sidebar">
+<!ENTITY toomanysidesRight.accesskey "R">
+<!ENTITY toomanysidesTop.label "Show in Top Sidebar">
+<!ENTITY toomanysidesTop.accesskey "T">
+<!ENTITY toomanysidesBottom.label "Show in Bottom Sidebar">
+<!ENTITY toomanysidesBottom.accesskey "B">
+<!ENTITY toomanysidesResetDefault.label "Reset to Default">
+<!ENTITY toomanysidesResetDefault.accesskey "D">
+

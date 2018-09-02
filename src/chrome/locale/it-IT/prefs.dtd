@@ -1,0 +1,13 @@
+<!ENTITY page.header.title "Opzioni Too Many Sides">
+<!ENTITY main.label "Principale">
+<!ENTITY hideTitle.caption "Nascondere titoli delle barre laterali">
+<!ENTITY hideTitleLeftSidebar.label "Barra a sinistra">
+<!ENTITY hideTitleRightSidebar.label "Barra a destra">
+<!ENTITY hideTitleTopSidebar.label "Barra in alto">
+<!ENTITY hideTitleBottomSidebar.label "Barra in basso">
+<!ENTITY positioning.caption "Posizione barra laterale">
+<!ENTITY defaultPosition.label "Posizione predefinita:">
+<!ENTITY positionLeft.label "barra a sinistra">
+<!ENTITY positionRight.label "barra a destra">
+<!ENTITY positionTop.label "barra in alto">
+<!ENTITY positionBottom.label "barra in basso">

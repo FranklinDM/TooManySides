@@ -1,0 +1,13 @@
+<!ENTITY page.header.title "Too Many Sides Options">
+<!ENTITY main.label "Main">
+<!ENTITY hideTitle.caption "Hide sidebar title">
+<!ENTITY hideTitleLeftSidebar.label "Hide left sidebar title">
+<!ENTITY hideTitleRightSidebar.label "Hide right sidebar title">
+<!ENTITY hideTitleTopSidebar.label "Hide top sidebar title">
+<!ENTITY hideTitleBottomSidebar.label "Hide bottom sidebar title">
+<!ENTITY positioning.caption "Sidebar position">
+<!ENTITY defaultPosition.label "Default position:">
+<!ENTITY positionLeft.label "Left sidebar">
+<!ENTITY positionRight.label "Right sidebar">
+<!ENTITY positionTop.label "Top sidebar">
+<!ENTITY positionBottom.label "Bottom sidebar">

@@ -1,0 +1,10 @@
+# basic registration
+content     toomanysides    chrome/content/                   contentaccessible=yes
+skin        toomanysides            global          chrome/skin/
+
+# browser overlay
+overlay     chrome://browser/content/browser.xul        chrome://toomanysides/content/TMSOverlay.xul
+
+# language
+locale      toomanysides            en-US           chrome/locale/en-US/
+locale      toomanysides            it              chrome/locale/it-IT/
